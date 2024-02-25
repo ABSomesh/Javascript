@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/roboto-font.css">
+    <link rel="stylesheet" href="../../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/css/accordion.css">
+    <link rel="stylesheet" href="../../assets/css/code-highlight.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Javascript Programs</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="programQuestions">
+            <h5 class="pageTitle my-4 roboto-medium">Remove duplicate values in array?</h5>
+            <div class="programBlock">
+                <div class="outputBlock">
+                    <pre><code>
+                        const array = [1,2,3,3,4,4,5,6,6,6];
+    
+                        let newArray = array.filter((value, index) => {
+                            return array.indexOf(value) === index;
+                        });
+    
+                        console.log(newArray);
+    
+                        //Output: [1, 2, 3, 4, 5, 6]
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/accordion.js"></script>
+    <script src="../../assets/js/pre-code.js"></script>
+    <script src="../../assets/js/code-highlight.min.js"></script>
+    <script src="./index.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

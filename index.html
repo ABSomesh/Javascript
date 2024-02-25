@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/roboto-font.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/css/accordion.css">
+    <link rel="stylesheet" href="./assets/css/code-highlight.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Javascript Programs</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="programQuestions">
+            <h5 class="pageTitle my-4 roboto-medium">Javascript Programs</h5>
+            <div id="accordion">
+                <div class="item">
+                    <div class="title">1: Find duplicate values in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [1,2,3,3,4,4,5,6,6,6];
+                
+                                    let duplicateArray = array.filter((value, index) => {
+                                        return array.indexOf(value) !== index;
+                                    });
+                
+                                    console.log(duplicateArray);
+                
+                                    //Output: [3, 4, 6, 6]
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">2: Remove duplicate values in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [1,2,3,3,4,4,5,6,6,6];
+                
+                                    let newArray = array.filter((value, index) => {
+                                        return array.indexOf(value) === index;
+                                    });
+                
+                                    console.log(newArray);
+                
+                                    //Output: [1, 2, 3, 4, 5, 6]
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">3: Find unique values in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [1,2,3,3,4,4,5,6,6,6];
+
+                                    const uniqueArray = [];
+                                    
+                                    for(i=0; i < array.length; i++) {
+                                        let count = 0;
+                                        for(j=0; j < array.length; j++) {
+                                            if(array[i] == array[j]) {
+                                                count++
+                                            }
+                                        }
+                                        if (count === 1) {
+                                            uniqueArray.push(array[i])
+                                        }
+                                    }
+                
+                                    console.log(uniqueArray);
+                
+                                    //Output: [1, 2, 5]
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">4: Find min and max values in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [15,86,9,63,151,5];
+                
+                                    let minValue = Math.min(...array);
+                
+                                    let maxValue = Math.max(...array);
+                
+                                    let minVal = array.reduce((prev,curr) => {
+                                        return prev < curr ? prev : curr;
+                                    })
+                
+                                    let maxVal = array.reduce((prev,curr) => {
+                                        return prev > curr ? prev : curr;
+                                    })
+                
+                                    console.log("Math Min:" + minValue);
+                                    console.log("Math Max:" + maxValue);
+                                    console.log("Reduce Min:" + minVal);
+                                    console.log("Reduce Max:" + maxVal);
+                
+                                    //Output 
+                                    //Math Min:5
+                                    //Math Max:151
+                                    //Reduce Min:5
+                                    //Reduce Max:151
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">5: Find largest number in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [15,86,9,63,151,255,5];
+
+                                    const sortedArray = array.sort((a,b) => b-a);
+
+                                    let largestNumber = sortedArray[0];
+
+                                    console.log(largestNumber);
+
+                                    //Output: 255
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">6: Find smallest number in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [15,86,9,63,151,255,5];
+
+                                    const sortedArray = array.sort((a,b) => a-b);
+
+                                    let smallestNumber = sortedArray[0];
+
+                                    console.log(smallestNumber);
+
+                                    //Output: 5
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">7: Find second largest number in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [15,86,9,63,151,255,5];
+                
+                                    const sortedArray = array.sort((a,b) => b-a);
+                
+                                    let secondLargestNumber = sortedArray[1];
+                
+                                    console.log(secondLargestNumber);
+                
+                                    //Output: 151
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">8: Find missing values in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [1,2,3,5,7,10];
+                
+                                    const largestNumber = array.sort((a,b) => b-a)[0];
+                
+                                    const missingNumbers = [];
+                
+                                    for(i=1; i <= largestNumber; i++) {
+                                        if(array.indexOf(i) === -1) {
+                                            missingNumbers.push(i);
+                                        }
+                                    }
+                
+                                    console.log(missingNumbers);
+                
+                                    //Output: [4, 6, 8, 9]
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">9: Find even and odd numbers in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [1,4,7,9,10,15,16,17,18,19,20];
+
+                                    let evenArray = array.filter((value) => {
+                                        return value % 2 === 0;
+                                    });
+
+                                    let oddArray = array.filter((value) => {
+                                        return value % 2 !== 0;
+                                    }, []);
+
+                                    //Output: [4, 6, 8, 9]
+                                    //console.log("Even Array:" + evenArray);
+                                    //console.log("Odd Array:" + oddArray);
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">10: Find sum of values in array?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    const array = [1,2,3,3,4,4,5,6,6,6,10];
+            
+                                    const totalSum = array.reduce((prev,curr) => {
+                                        return prev+curr;
+                                    })
+            
+                                    console.log(totalSum);
+            
+                                    //Output: 50
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">11: Find factorial of given number?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let number = 5;
+            
+                                    let factorialVal = 1;
+            
+                                    for(i=1; i <= number; i++) {
+                                        factorialVal *= i;
+                                    }
+            
+                                    console.log(factorialVal);
+            
+                                    //Output: 120
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">12: Check given number is even or not?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let number = 5;
+            
+                                    let number1 = 10;
+            
+                                    if(number % 2 === 0) {
+                                        console.log(number + " is Even Number");
+                                    }
+                                    else {
+                                        console.log(number + " is not Even Number");
+                                    }
+            
+                                    if(number1 % 2 === 0) {
+                                        console.log(number1 + " is Even Number");
+                                    }
+                                    else {
+                                        console.log(number1 + " is not Even Number");
+                                    }
+            
+                                    //Output:
+                                    //5 is not Even Number
+                                    //10 is Even Number
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">13: Check given number is odd or not?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let number = 5;
+            
+                                    let number1 = 10;
+            
+                                    if(number % 2 !== 0) {
+                                        console.log(number + " is Odd Number");
+                                    }
+                                    else {
+                                        console.log(number + " is not Odd Number");
+                                    }
+            
+                                    if(number1 % 2 !== 0) {
+                                        console.log(number1 + " is Odd Number");
+                                    }
+                                    else {
+                                        console.log(number1 + " is not Odd Number");
+                                    }
+            
+                                    //Output:
+                                    //5 is Odd Number
+                                    //10 is not Odd Number
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">14: Check if vowels present in given string?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let str = "Hi Programmer";
+            
+                                    let vowels = ["a", "e", "i", "o", "u"];
+            
+                                    let vowel = "false";
+            
+                                    for(i=0; i < vowels.length; i++) {
+                                        vowel = str.includes(vowels[i])
+                                        if(vowel) {
+                                            console.log("String contain Vowels");
+                                            break
+                                        }
+                                    }
+            
+                                    if(!vowel) {
+                                        console.log("String does not contain Vowels");
+                                    }
+            
+                                    //Output: String contain Vowels
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">15: Find vowels in given string?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let str = "Hi Programmer";
+
+                                    let vowels = ["a", "e", "i", "o", "u"];
+
+                                    let strArray = str.toLowerCase().split("");
+
+                                    let vowelArray = strArray.filter((strarr) => {
+                                        return vowels.includes(strarr);
+                                    });
+
+                                    console.log(vowelArray);
+            
+                                    //Output: ['i', 'o', 'a', 'e']
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">16: Count vowels in given string? </div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let str = "Hi Programmer";
+            
+                                    let vowels = ["a", "e", "i", "o", "u"];
+            
+                                    let vowelCount = 0;
+            
+                                    for(let strChar of str) {
+                                        if(vowels.includes(strChar)) {
+                                            vowelCount++;
+                                        }
+                                    }
+            
+                                    console.log(vowelCount);
+            
+                                    //Output: 4
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">17: Reverse the given string?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let str = "Hello Programmer";
+            
+                                    let strArray = str.split("").reverse().join("");
+            
+                                    console.log(strArray);
+                                    
+                                    //Output: remmargorP olleH
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">18: Reverse each word of the given string?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let str = "Hello Programmer";
+            
+                                    let strArray = str.split("").reverse().join("");
+            
+                                    let reversedArray = strArray.split(" ");
+            
+                                    let reversedString = reversedArray.reverse().join(" ");
+            
+                                    console.log(reversedString);
+                                    
+                                    //Output: olleH remmargorP
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">19: Swap variables with another variable?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let a=5;
+            
+                                    let b=10;
+            
+                                    let temp=a;
+            
+                                    a=b;
+            
+                                    b=temp;
+            
+                                    console.log("a is:",a,"b is:",b);
+            
+                                    //Output: a is: 10 b is: 5
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">20: Swap variables without another variable?</div>
+                    <div class="text">
+                        <div class="programBlock">
+                            <div class="outputBlock">
+                                <pre><code>
+                                    let a=5;
+            
+                                    let b=10;
+            
+                                    [a,b] = [b,a];
+            
+                                    console.log("a is:",a,"b is:",b);
+            
+                                    //Output: a is: 10 b is: 5
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/accordion.js"></script>
+        <script src="./assets/js/pre-code.js"></script>
+        <script src="./assets/js/code-highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+</body>
+
+</html>

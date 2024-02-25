@@ -1,0 +1,33 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    color: #333333;
+    overflow-y: scroll;
+}
+
+pre {
+    margin: 0px;
+}
+
+code {
+    font-size: 1rem !important;
+}
+
+.programQuestions {
+    max-width: 750px;
+    margin: auto;
+}
+
+.pageTitle {
+    background-color: #465775;
+    text-align: center;
+    color: #f0f0f0;
+    padding: 0.75rem;
+}
+
+.programBlock {
+    max-width: 600px;
+    margin: auto;
+}
